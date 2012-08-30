@@ -29,11 +29,12 @@
 // Nav headers (for dropdowns and lists)
 .nav-header {
   display: block;
-  padding: 3px 15px;
+  padding: 3px 5px;
   font-size: 11px;
   font-weight: bold;
   line-height: @baseLineHeight;
   color: @grayLight;
+  color: @gray;
   text-shadow: 0 1px 0 rgba(255,255,255,.5);
   text-transform: uppercase;
 }
@@ -137,16 +138,17 @@
 .nav-pills > li > a {
   padding-top: 8px;
   padding-bottom: 8px;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  .border-radius(5px);
+  // margin-top: 2px;
+  // margin-bottom: 2px;
+  // .border-radius(5px);
+  text-shadow: 0 1px 0 #fff;
+  .transition(background-color .5s);
 }
 
 // Active state
 .nav-pills > .active > a,
 .nav-pills > .active > a:hover {
-  color: @white;
-  background-color: @linkColor;
+  background-color: @selectionDark;
 }
 
 

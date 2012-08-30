@@ -162,7 +162,7 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: #333333;
-  background-color: #ffffff;
+  background-color: #fafafa;
 }
 
 a {
@@ -616,10 +616,11 @@ h5,
 h6 {
   margin: 10px 0;
   font-family: inherit;
-  font-weight: bold;
+  font-weight: normal;
   line-height: 1;
   color: inherit;
   text-rendering: optimizelegibility;
+  text-shadow: 0 1px 0 #ffffff;
 }
 
 h1 small,
@@ -2038,7 +2039,7 @@ table .span24 {
   *margin-right: .3em;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url("../img/glyphicons-halflings.png");
+  background-image: url("../images/glyphicons-halflings.png");
   background-position: 14px 14px;
   background-repeat: no-repeat;
 }
@@ -2052,7 +2053,7 @@ table .span24 {
 .dropdown-menu > li > a:hover > [class*=" icon-"],
 .dropdown-menu > .active > a > [class^="icon-"],
 .dropdown-menu > .active > a > [class*=" icon-"] {
-  background-image: url("../img/glyphicons-halflings-white.png");
+  background-image: url("../images/glyphicons-halflings-white.png");
 }
 
 .icon-glass {
@@ -2911,8 +2912,8 @@ button.close {
   margin-bottom: 0;
   *margin-left: .3em;
   font-size: 14px;
-  line-height: 20px;
-  *line-height: 20px;
+  line-height: 8px;
+  *line-height: 8px;
   color: #333333;
   text-align: center;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
@@ -3641,11 +3642,12 @@ input[type="submit"].btn.btn-mini {
 
 .nav-header {
   display: block;
-  padding: 3px 15px;
+  padding: 3px 5px;
   font-size: 11px;
   font-weight: bold;
   line-height: 20px;
   color: #999999;
+  color: #555555;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   text-transform: uppercase;
 }
@@ -3758,17 +3760,16 @@ input[type="submit"].btn.btn-mini {
 .nav-pills > li > a {
   padding-top: 8px;
   padding-bottom: 8px;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-          border-radius: 5px;
+  text-shadow: 0 1px 0 #fff;
+  -webkit-transition: background-color 0.5s;
+     -moz-transition: background-color 0.5s;
+       -o-transition: background-color 0.5s;
+          transition: background-color 0.5s;
 }
 
 .nav-pills > .active > a,
 .nav-pills > .active > a:hover {
-  color: #ffffff;
-  background-color: #0088cc;
+  background-color: #d2d7e0;
 }
 
 .nav-stacked > li {
@@ -4023,6 +4024,7 @@ input[type="submit"].btn.btn-mini {
 
 .navbar-inner {
   min-height: 40px;
+  padding: 10px 20px;
   padding-right: 20px;
   padding-left: 20px;
   background-color: #fafafa;
@@ -4032,14 +4034,14 @@ input[type="submit"].btn.btn-mini {
   background-image: -o-linear-gradient(top, #ffffff, #f2f2f2);
   background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);
   background-repeat: repeat-x;
-  border: 1px solid #d4d4d4;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
+  border-bottom: 1px solid #d4d4d4;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff2f2f2', GradientType=0);
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
-     -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
-          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  -webkit-box-shadow: 0 1px 0px #ffffff;
+     -moz-box-shadow: 0 1px 0px #ffffff;
+          box-shadow: 0 1px 0px #ffffff;
 }
 
 .navbar .container {
@@ -4056,7 +4058,6 @@ input[type="submit"].btn.btn-mini {
   padding: 10px 20px 10px;
   margin-left: -20px;
   font-size: 20px;
-  font-weight: 200;
   color: #555555;
   text-shadow: 0 1px 0 #ffffff;
 }
@@ -4757,9 +4758,6 @@ input[type="submit"].btn.btn-mini {
   border: 1px solid #999;
   border: 1px solid rgba(0, 0, 0, 0.3);
   *border: 1px solid #999;
-  -webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
   -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
      -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
           box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
@@ -4798,6 +4796,12 @@ input[type="submit"].btn.btn-mini {
   max-height: 400px;
   padding: 15px;
   overflow-y: auto;
+}
+
+.modal-body h3,
+.modal-body h4,
+.modal-body h5 {
+  font-weight: bold;
 }
 
 .modal-form {

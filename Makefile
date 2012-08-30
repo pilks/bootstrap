@@ -71,6 +71,22 @@ bootstrap:
 	rm bootstrap/js/copyright.js bootstrap/js/bootstrap.min.tmp.js
 
 #
+# CLEAN - rhesus
+#
+
+clean:
+	@rm -rf bootstrap
+
+#
+# CLEAN & BUILD BOOTSTRAP
+#
+
+RHESUS_PUBLIC = ..
+cnbb: clean build bootstrap
+	cp bootstrap/css/bootstrap.css "${RHESUS_PUBLIC}/stylesheets/bootstrap.wcc.css"
+	cp bootstrap/js/bootstrap.js "${RHESUS_PUBLIC}/javascripts/libs/bootstrap.wcc.js"
+
+#
 # MAKE FOR GH-PAGES 4 FAT & MDO ONLY (O_O  )
 #
 
